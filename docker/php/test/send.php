@@ -6,9 +6,7 @@
 
 ini_set('display_errors', "On");
 
-//$url = 'http://localhost:8080/index.php';
 $url = 'http://localhost/index.php';
-//$url = 'index.php';
 //$url = 'http://localhost:44395/api/members';
 
 $data = array(
@@ -33,7 +31,6 @@ $context = array(
     )
 );
 
-//$html = file_get_contents($url, false, stream_context_create($context));
 $html = file_get_contents($url, false, stream_context_create($context));
 
 var_dump($http_response_header);
