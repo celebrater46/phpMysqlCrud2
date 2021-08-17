@@ -23,8 +23,8 @@ $options = [
 $context = stream_context_create($options);
 
 // POST
-//$contents = file_get_contents('http://localhost:8080/index.php', false, $context);
-$contents = file_get_contents('http://localhost/index.php', false, $context);
+$contents = file_get_contents('http://localhost:8080/index.php', false, $context);
+//$contents = file_get_contents('http://localhost/index.php', false, $context);
 //$contents = file_get_contents('http://enin-world.sakura.ne.jp/test_php/json/receive.php', false, $context);
 
 // receive.php のレスポンスを表示
