@@ -44,8 +44,8 @@ function getData() {
     pdo($sql, false, null);
 }
 
-//postData();
-//getData();
+postData();
+getData();
 
 // JSON用
 //$json = file_get_contents("php://input"); // POSTされたJSON文字列を取り出し
