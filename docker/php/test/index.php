@@ -52,6 +52,17 @@ $json = file_get_contents("php://input"); // POSTされたJSON文字列を取り
 $contents = json_decode($json, true); // JSON文字列をobjectに変換（第2引数をtrueにしないとハマるので注意）
 var_dump($contents); // デバッグ用
 
+if(!array_key_exists("Name", $contents)) {
+    echo “名前を入力してください。” . PHP_EOL;
+} elseif(!array_key_exists("Age", $contents)) {
+    echo “年齢を入力してください。” . PHP_EOL;
+} elseif(!array_key_exists("HireDate", $contents)) {
+    echo “雇用年月日を入力してください。” . PHP_EOL;
+} else {
+    postData($contents);
+    getData();
+}
+
 //if(!array_key_exists("Name", $_POST)) {
 //    echo “名前を入力してください。” . PHP_EOL;
 //} elseif(!array_key_exists("Age", $_POST)) {
